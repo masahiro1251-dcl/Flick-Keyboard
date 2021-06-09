@@ -7,7 +7,7 @@ public class FlickButton : MonoBehaviour
 {
     [SerializeField] bool useFlick;
 
-    [SerializeField] KeyInput keyInput;
+    KeyInput keyInput;
     [SerializeField] KeyInput.Buttons buttonName;
     [SerializeField] float flickThreshold = 0.01f;
     MyPressableButtonHoloLens2 pressableButton;
@@ -18,6 +18,7 @@ public class FlickButton : MonoBehaviour
     void Start()
     {
         pressableButton = GetComponent<MyPressableButtonHoloLens2>();
+        keyInput = FindObjectOfType<KeyInput>().GetComponent<KeyInput>();
     }
 
     public void pressed()
