@@ -664,7 +664,7 @@ MonoBehaviour:
   releaseDistanceDelta: 0.002
   returnSpeed: 10
   releaseOnTouchEnd: 1
-  enforceFrontPush: 0
+  enforceFrontPush: 1
   TouchBegin:
     m_PersistentCalls:
       m_Calls:
