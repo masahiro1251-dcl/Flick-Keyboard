@@ -33,7 +33,8 @@ public class FlickButton : MonoBehaviour
         if (useFlick)
         {
             touchedPointAtEnd = pressableButton.recentTouchedPoint;
-            Vector2 v = new Vector2(touchedPointAtEnd.x - touchedPointAtFirst.x, touchedPointAtEnd.y - touchedPointAtFirst.y);
+            // Vector2 v = new Vector2(touchedPointAtEnd.x - touchedPointAtFirst.x, touchedPointAtEnd.y - touchedPointAtFirst.y);
+            Vector2 v = touchedPointAtEnd;
             int direction = 0;
 
             if (Mathf.Abs(v.x) > Mathf.Abs(v.y))

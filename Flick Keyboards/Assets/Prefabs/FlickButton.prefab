@@ -658,13 +658,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingButtonVisuals: {fileID: 1312930846713398433}
   distanceSpaceMode: 1
-  startPushDistance: -0.008
-  maxPushDistance: 0.006
+  startPushDistance: -0.004
+  maxPushDistance: 0.003
   pressDistance: 0.0001
   releaseDistanceDelta: 0.002
-  returnSpeed: 25
+  returnSpeed: 10
   releaseOnTouchEnd: 1
-  enforceFrontPush: 1
+  enforceFrontPush: 0
   TouchBegin:
     m_PersistentCalls:
       m_Calls:
@@ -878,8 +878,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312930847789588572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.008}
-  m_LocalScale: {x: 0.032, y: 0.032, z: 0.016}
+  m_LocalPosition: {x: 0, y: 0, z: -0.004}
+  m_LocalScale: {x: 0.032, y: 0.032, z: 0.008}
   m_Children:
   - {fileID: 8785059177626009041}
   m_Father: {fileID: 1084614076253112998}
