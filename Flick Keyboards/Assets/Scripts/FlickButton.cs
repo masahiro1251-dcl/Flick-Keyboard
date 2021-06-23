@@ -14,11 +14,14 @@ public class FlickButton : MonoBehaviour
 
     Vector3 touchedPointAtFirst, touchedPointAtEnd;
 
+    FlickResponseBoxController responseBoxController;
+
     // Start is called before the first frame update
     void Start()
     {
         pressableButton = GetComponent<MyPressableButtonHoloLens2>();
         keyInput = FindObjectOfType<KeyInput>().GetComponent<KeyInput>();
+        responseBoxController = GetComponent<FlickResponseBoxController>();
     }
 
     public void pressed()
@@ -48,6 +51,7 @@ public class FlickButton : MonoBehaviour
                 else if (v.y < -flickThreshold) direction = 4;
             }
             keyInput.button(buttonName, direction);
+            responseBoxController.createFlickResponseBox(direction);
         }
         else keyInput.button(buttonName, 0);
     }

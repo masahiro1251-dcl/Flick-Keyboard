@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 8649941150016685541}
   - component: {fileID: 5662465999127826701}
   - component: {fileID: 5662465999127826702}
+  - component: {fileID: -277625695564515564}
   m_Layer: 0
   m_Name: FlickButton
   m_TagString: Untagged
@@ -721,6 +722,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: createHintBoxes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
@@ -758,11 +770,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: destroyHintBoxes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   movingButtonIconText: {fileID: 7048965145420632540}
   compressableButtonVisuals: {fileID: 4050278586692779564}
   minCompressPercentage: 0.25
   highlightPlate: {fileID: 1586041479065354838}
   highlightPlateAnimationTime: 0.25
+--- !u!114 &-277625695564515564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312930847085162460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196f6ff64e9120740bed5fcab59a225e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickResponseBoxPrefab: {fileID: 1991445153779552700, guid: 250fd60d185e19747862e58a0aae4cb4,
+    type: 3}
+  offset: 0.032
 --- !u!1 &1312930847572968304
 GameObject:
   m_ObjectHideFlags: 0
