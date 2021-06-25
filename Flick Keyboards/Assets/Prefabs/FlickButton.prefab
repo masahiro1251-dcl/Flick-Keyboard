@@ -659,7 +659,7 @@ MonoBehaviour:
   movingButtonVisuals: {fileID: 1312930846713398433}
   distanceSpaceMode: 1
   startPushDistance: -0.004
-  maxPushDistance: 0.003
+  maxPushDistance: 0.004
   pressDistance: 0.0001
   releaseDistanceDelta: 0.002
   returnSpeed: 10
