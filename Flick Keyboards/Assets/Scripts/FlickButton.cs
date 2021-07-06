@@ -53,6 +53,10 @@ public class FlickButton : MonoBehaviour
             keyInput.button(buttonName, direction);
             responseBoxController.createFlickResponseBox(direction);
         }
-        else keyInput.button(buttonName, 0);
+        else
+        {
+            keyInput.button(buttonName, 0);
+            responseBoxController.createFlickResponseBox(0);
+        }
     }
 }

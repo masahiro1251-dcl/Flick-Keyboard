@@ -20,7 +20,8 @@ public class KeyInput : MonoBehaviour
         Symbol,
         Convert,
         Delete,
-        Null
+        Null,
+        Alldelete
     }
 
     readonly string[,][] chars = new string[,][]{
@@ -85,6 +86,9 @@ public class KeyInput : MonoBehaviour
                 break;
             case Buttons.Null:
                 break;
+            case Buttons.Alldelete:
+                alldelete();
+                break;
             default:
                 Debug.LogWarning("unknown key has been input.");
                 break;
@@ -122,6 +126,12 @@ public class KeyInput : MonoBehaviour
         {
             textMesh.text = chars[inputChar[0], inputChar[1]][inputChar[2]] + textMesh.text;
         }
+    }
+
+    private void alldelete()
+    {
+        textMesh.text = "";
+        inputChars = new Stack<int[]> { };
     }
 
 }

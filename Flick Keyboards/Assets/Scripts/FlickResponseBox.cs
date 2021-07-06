@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class FlickResponseBox : MonoBehaviour
 {
-    MeshRenderer mesh;
+    Animator animator;
 
     private void Start()
     {
-        mesh = GetComponent<MeshRenderer>();
-        StartCoroutine("fadeout", (byte)(mesh.material.color.a * 255));
+        animator = GetComponent<Animator>();
+        StartCoroutine("waitFadeOut");
     }
-    IEnumerator fadeout(byte alpha)
+    IEnumerator waitFadeOut()
     {
-        for (byte i = 0; i < alpha; i += 5)
-        {
-            mesh.material.color = mesh.material.color - new Color32(0, 0, 0, 1);
+        yield return null;
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
             yield return null;
-        }
         Destroy(this.gameObject);
     }
 }

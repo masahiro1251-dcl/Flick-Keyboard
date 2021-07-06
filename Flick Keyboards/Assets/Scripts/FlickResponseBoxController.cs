@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlickResponseBoxController : MonoBehaviour
 {
     [SerializeField] GameObject flickResponseBoxPrefab;
+    [Tooltip("フリックした際、ResponseBoxを中心位置からどれだけずらした位置に表示するか")]
     [SerializeField] float offset;
     public void createFlickResponseBox(int direction)
     {
