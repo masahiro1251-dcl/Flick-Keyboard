@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 1312930847085162460, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -193,6 +193,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: useFlick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: buttonName
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649941150016685541, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: iconSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683,
+        type: 2}
+    - target: {fileID: 8649941150016685541, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: iconQuadTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: d74cdc58c5d172a469ea5ca987eb17f6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45c5ed467df77345b84acf836ef1779, type: 3}
 --- !u!4 &101635058 stripped
@@ -221,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.040000003
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -386,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000037252903
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -508,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3066\u3059\u30681"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe0f56eb04ce8cb4cbd2844f88c8b1d5, type: 2}
   m_sharedMaterial: {fileID: -3428160537946827419, guid: fe0f56eb04ce8cb4cbd2844f88c8b1d5,
@@ -730,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.039999995
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -820,7 +841,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.040000003
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1121,7 +1142,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.039999995
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1424,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000037252903
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1509,7 +1530,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000037252903
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1712,7 +1733,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000037252903
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1797,7 +1818,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.040000003
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1882,7 +1903,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.039999995
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -1967,7 +1988,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.040000003
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2052,7 +2073,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.039999995
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2132,7 +2153,7 @@ PrefabInstance:
     - target: {fileID: 1312930847085162460, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2142,7 +2163,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2189,6 +2210,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: useFlick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: buttonName
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649941150016685541, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: iconSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683,
+        type: 2}
+    - target: {fileID: 8649941150016685541, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
+      propertyPath: iconQuadTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: ed2f699f32ec17f4cad3423d2c449119, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45c5ed467df77345b84acf836ef1779, type: 3}
 --- !u!4 &1744554899 stripped
@@ -2217,7 +2259,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2318,7 +2360,7 @@ PrefabInstance:
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1312930847604730173, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2367,8 +2409,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
+      propertyPath: useFlick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662465999127826701, guid: c45c5ed467df77345b84acf836ef1779,
+        type: 3}
       propertyPath: buttonName
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8649941150016685541, guid: c45c5ed467df77345b84acf836ef1779,
         type: 3}
@@ -2636,26 +2683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeList:
-  - Name: FlickButton
-    Offset: {x: 0, y: 0}
-    Radius: 0
-    Transform: {fileID: 638362405}
-    Colliders: []
-  - Name: FlickButton (1)
-    Offset: {x: 0, y: 0}
-    Radius: 0
-    Transform: {fileID: 419269804}
-    Colliders: []
-  - Name: FlickButton (2)
-    Offset: {x: 0, y: 0}
-    Radius: 0
-    Transform: {fileID: 1133846442}
-    Colliders: []
-  - Name: FlickButton (3)
-    Offset: {x: 0, y: 0}
-    Radius: 0
-    Transform: {fileID: 130346712}
-    Colliders: []
   - Name: FlickButton (4)
     Offset: {x: 0, y: 0}
     Radius: 0
@@ -2749,7 +2776,7 @@ MonoBehaviour:
   radialRange: 180
   distance: 1
   rows: 4
-  columns: 5
+  columns: 4
   cellWidth: 0.04
   cellHeight: 0.04
   assetVersion: 1
