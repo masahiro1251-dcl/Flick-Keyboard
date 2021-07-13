@@ -20,6 +20,9 @@ public class KeyInput : MonoBehaviour
         Symbol,
         Convert,
         Delete,
+        Alldelete,
+        Space,
+        Enter,
         Null
     }
 
@@ -33,8 +36,8 @@ public class KeyInput : MonoBehaviour
         { new string[] {"ま"}, new string[] {"み"}, new string[]{"む"},new string[] {"め"}, new string[] {"も"}},
         { new string[] {"や", "ゃ"}, new string[] {"（", "「", "＜"}, new string[]{"ゆ", "ゅ"}, new string[] {"）", "」", "＞"} ,new string[] {"よ", "ょ"}},
         { new string[] {"ら"}, new string[] {"り"}, new string[]{"る"},new string[] {"れ"}, new string[] {"ろ"}},
-        { new string[] {"わ", "ゎ"}, new string[] {"を"}, new string[]{"ん"},new string[] {"ー", "～", "-"}, new string[] {"わ", "ゎ"}},
-        { new string[] {"、", "・", ","}, new string[] {"。", "…", "."}, new string[]{"？", "?"},new string[] {"！", "!"}, new string[] {"、", "・", ","}}
+        { new string[] {"わ", "ゎ"}, new string[] {"を"}, new string[]{"ん"},new string[] {"ー", "～", "-"}, new string[] {"　"}},
+        { new string[] {"、", "・", ","}, new string[] {"。", "…", "."}, new string[]{"？", "?"},new string[] {"！", "!"}, new string[] {"、", "・", ","}},
     };
 
     private TextMeshProUGUI textMesh;
@@ -44,21 +47,6 @@ public class KeyInput : MonoBehaviour
     {
         textMesh = GetComponent<TextMeshProUGUI>();
         inputChars = new Stack<int[]>();
-        /*
-        button(Buttons.Ha, 0);
-        button(Buttons.Ra, 4);
-        button(Buttons.Wa, 3);
-        button(Buttons.Wa, 0);
-        button(Buttons.Wa, 3);
-        button(Buttons.Ra, 2);
-        button(Buttons.Ta, 4);
-        button(Buttons.Convert, 0);
-        Debug.Log("Text is \"" + textMesh.text + "\"");
-        button(Buttons.Symbol, 3);
-        Debug.Log("Text is \"" + textMesh.text + "\"");
-        button(Buttons.Delete, 3);
-        Debug.Log("Text is \"" + textMesh.text + "\"");
-        */
     }
     public void button(Buttons button, int direction)
     {
@@ -82,6 +70,15 @@ public class KeyInput : MonoBehaviour
                 break;
             case Buttons.Delete:
                 delete();
+                break;
+            case Buttons.Alldelete:
+                alldelete();
+                break;
+            case Buttons.Space:
+                space();
+                break;
+            case Buttons.Enter:
+                search();
                 break;
             case Buttons.Null:
                 break;
@@ -124,4 +121,21 @@ public class KeyInput : MonoBehaviour
         }
     }
 
+    private void alldelete()
+    {
+        textMesh.text = "";
+        inputChars = new Stack<int[]> { };
+    }
+
+    //スペースはわ行のおの段に入れた
+    private void space()
+    {
+        input(9, 4);
+    }
+
+    private void search()
+    {
+        Debug.Log("search");
+        Application.OpenURL("https://www.google.com/search?q=" + textMesh.text.Replace("　", "+"));
+    }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1312930846598856239}
   - component: {fileID: 1312930846598856275}
-  - component: {fileID: 5261422154678864163}
   - component: {fileID: 1312930846598856237}
   - component: {fileID: 1312930846598856236}
   m_Layer: 0
@@ -78,14 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &5261422154678864163
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312930846598856238}
-  m_Mesh: {fileID: 0}
 --- !u!222 &1312930846598856237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -136,7 +127,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -148,9 +139,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -233,6 +224,7 @@ GameObject:
   - component: {fileID: 8649941150016685541}
   - component: {fileID: 5662465999127826701}
   - component: {fileID: 5662465999127826702}
+  - component: {fileID: -277625695564515564}
   m_Layer: 0
   m_Name: FlickButton
   m_TagString: Untagged
@@ -658,8 +650,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingButtonVisuals: {fileID: 1312930846713398433}
   distanceSpaceMode: 1
-  startPushDistance: -0.008
-  maxPushDistance: 0.006
+  startPushDistance: -0.004
+  maxPushDistance: 0.003
   pressDistance: 0.0001
   releaseDistanceDelta: 0.002
   returnSpeed: 25
@@ -730,6 +722,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4201759644772353463}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
@@ -767,11 +770,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4201759644772353463}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   movingButtonIconText: {fileID: 7048965145420632540}
   compressableButtonVisuals: {fileID: 4050278586692779564}
   minCompressPercentage: 0.25
   highlightPlate: {fileID: 1586041479065354838}
   highlightPlateAnimationTime: 0.25
+--- !u!114 &-277625695564515564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312930847085162460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196f6ff64e9120740bed5fcab59a225e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickResponseBoxPrefab: {fileID: 1991445153779552700, guid: 250fd60d185e19747862e58a0aae4cb4,
+    type: 3}
+  offset: 0.032
 --- !u!1 &1312930847572968304
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,8 +907,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312930847789588572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.008}
-  m_LocalScale: {x: 0.032, y: 0.032, z: 0.016}
+  m_LocalPosition: {x: 0, y: 0, z: -0.004}
+  m_LocalScale: {x: 0.032, y: 0.032, z: 0.008}
   m_Children:
   - {fileID: 8785059177626009041}
   m_Father: {fileID: 1084614076253112998}
@@ -1146,7 +1175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec72a3a105768f746b556a8dfdae61a8, type: 2}
+  - {fileID: 2100000, guid: 80658ea83d8235d4aa0c6c3ec5c9a68e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

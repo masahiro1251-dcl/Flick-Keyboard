@@ -14,11 +14,14 @@ public class FlickButton : MonoBehaviour
 
     Vector3 touchedPointAtFirst, touchedPointAtEnd;
 
+    FlickResponseBoxController responseBoxController;
+
     // Start is called before the first frame update
     void Start()
     {
         pressableButton = GetComponent<MyPressableButtonHoloLens2>();
         keyInput = FindObjectOfType<KeyInput>().GetComponent<KeyInput>();
+        responseBoxController = GetComponent<FlickResponseBoxController>();
     }
 
     public void pressed()
@@ -33,7 +36,8 @@ public class FlickButton : MonoBehaviour
         if (useFlick)
         {
             touchedPointAtEnd = pressableButton.recentTouchedPoint;
-            Vector2 v = new Vector2(touchedPointAtEnd.x - touchedPointAtFirst.x, touchedPointAtEnd.y - touchedPointAtFirst.y);
+            //Vector2 v = new Vector2(touchedPointAtEnd.x - touchedPointAtFirst.x, touchedPointAtEnd.y - touchedPointAtFirst.y); //初期押し込み位置からの位置によるフリック判定
+            Vector2 v = touchedPointAtEnd; //初期押し込み位置に関係なくフリック判定
             int direction = 0;
 
             if (Mathf.Abs(v.x) > Mathf.Abs(v.y))
@@ -47,7 +51,12 @@ public class FlickButton : MonoBehaviour
                 else if (v.y < -flickThreshold) direction = 4;
             }
             keyInput.button(buttonName, direction);
+            responseBoxController.createFlickResponseBox(direction);
         }
-        else keyInput.button(buttonName, 0);
+        else
+        {
+            keyInput.button(buttonName, 0);
+            responseBoxController.createFlickResponseBox(0);
+        }
     }
 }
