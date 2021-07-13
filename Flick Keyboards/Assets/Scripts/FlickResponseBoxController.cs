@@ -20,7 +20,7 @@ public class FlickResponseBoxController : MonoBehaviour
             default: break;
         }
         GameObject responseBox = Instantiate(flickResponseBoxPrefab, this.transform);
-        responseBox.transform.position += new Vector3(x, y, 0);
+        responseBox.transform.localPosition += new Vector3(x, y, 0);
     }
 
 }

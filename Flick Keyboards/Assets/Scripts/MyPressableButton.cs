@@ -568,8 +568,9 @@ namespace Microsoft.MixedReality.Toolkit.UI
         public Vector3 recentTouchedPoint { get; private set; }
         private Vector3 getLocalPosition(Vector3 positionWorldSpace)
         {
-            Debug.Log(positionWorldSpace - InitialWorldPosition);
-            return positionWorldSpace - InitialWorldPosition;
+            //Debug.Log(positionWorldSpace - InitialWorldPosition);
+            // return positionWorldSpace - InitialWorldPosition;
+            return this.transform.InverseTransformPoint(positionWorldSpace);
         }
 
         #endregion
