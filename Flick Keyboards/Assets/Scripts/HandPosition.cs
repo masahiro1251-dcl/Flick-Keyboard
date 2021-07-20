@@ -11,6 +11,13 @@ public class HandPosition : MonoBehaviour
 {
     [SerializeField] GameObject Contents;
     [SerializeField] GameObject Specials;
+    [SerializeField] float ydist;
+    [SerializeField] float buttonangle;
+    [SerializeField] float margin;  // 今回は0.02f
+    private float dist = 0.2f;
+    private float buttontheta;
+    private float calc_distance_y, calc_distance_z;
+    private float calc_margin_y, calc_margin_z;
     private Vector3 _estimatedAngularVelocity = Vector3.zero;
     private Quaternion pastRotation = Quaternion.identity;
     public Vector3 EstimatedAngularVelocity
@@ -23,6 +30,11 @@ public class HandPosition : MonoBehaviour
     {
         Contents.SetActive(false);
         Specials.SetActive(false);
+        buttontheta = Mathf.PI * (90.0f - buttonangle) / 180.0f;
+        calc_distance_y = -(ydist + dist * Mathf.Sin(buttontheta));
+        calc_distance_z = -(dist * Mathf.Cos(buttontheta));
+        calc_margin_y = margin * Mathf.Sin(buttontheta);
+        calc_margin_z = margin * Mathf.Cos(buttontheta);
     }
 
     // Update is called once per frame
@@ -70,13 +82,37 @@ public class HandPosition : MonoBehaviour
                 Contents.transform.position = jointTransform.position;
             }
             pastRotation = Contents.transform.rotation;
-            Debug.Log("Contents " + Contents.transform.position + " Specials " + Specials.transform.position);
+            // Debug.Log("Contents " + Contents.transform.rotation + " Specials " + Specials.transform.position);
+            ChildrenPosition();
         }
         else
         {
             Contents.SetActive(false);
             Specials.SetActive(false);
             pastRotation = Quaternion.identity;
+        }
+    }
+
+    private void ChildrenPosition()
+    {
+        Transform children = Contents.GetComponentInChildren<Transform>();
+        int cnt = 0;
+        foreach(Transform obj in children)
+        {
+            if(obj.name[0] == 'F')
+            {
+                obj.transform.localRotation = Quaternion.Euler(-buttonangle, 0, -90);
+                // 今の状態だとその場で回転しているだけなのでローカル座標もうまくいじる
+                if(cnt == 0 || cnt == 6)
+                {
+                    obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, calc_distance_y, calc_distance_z);
+                }
+                else
+                {
+                    obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, calc_distance_y + calc_margin_y*(cnt%6), calc_distance_z + calc_margin_z*(cnt%6));
+                }
+            }
+            cnt++;
         }
     }
 }
