@@ -14,7 +14,7 @@ public class HandPosition : MonoBehaviour
     [SerializeField] float ydist;   // Contentsから離す距離
     [SerializeField] float buttonangle; // ボタン自身の角度
     [SerializeField] float margin;  // 今回は0.02f
-    private float dist = 0.2f;
+    private float dist = 0.18f;
     private float buttontheta;
     private float calc_distance_y, calc_distance_z;
     private float calc_margin_y, calc_margin_z;
