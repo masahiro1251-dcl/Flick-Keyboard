@@ -13,8 +13,8 @@ public class HandPosition : MonoBehaviour
     [SerializeField] GameObject Specials;
     [SerializeField] float ydist;   // Contentsから離す距離
     [SerializeField] float buttonangle; // ボタン自身の角度
-    [SerializeField] float margin;  // 今回は0.02f
-    private float dist = 0.18f;
+    [SerializeField] float margin;  // 今回は0.02f, ボタンのサイズが0.02fだから
+    private float dist = 0.22f;
     private float buttontheta;
     private float calc_distance_y, calc_distance_z;
     private float calc_margin_y, calc_margin_z;
@@ -29,7 +29,6 @@ public class HandPosition : MonoBehaviour
     void Start()
     {
         Contents.SetActive(false);
-        Specials.SetActive(false);
         buttontheta = Mathf.PI * (90.0f - buttonangle) / 180.0f;
         calc_distance_y = -(ydist + dist * Mathf.Sin(buttontheta));
         calc_distance_z = -(dist * Mathf.Cos(buttontheta));
@@ -44,12 +43,8 @@ public class HandPosition : MonoBehaviour
         if(HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Left, out MixedRealityPose lpose))
         {
             Contents.SetActive(true);
-            Specials.SetActive(true);
             Transform jointTransform = handJointService.RequestJointTransform(TrackedHandJoint.Wrist, Handedness.Left);
             Quaternion rot = Contents.transform.rotation;
-            Transform palmTransform = handJointService.RequestJointTransform(TrackedHandJoint.Palm, Handedness.Left);
-            Specials.transform.rotation = palmTransform.rotation;
-            Specials.transform.position = palmTransform.position;
 
             if(pastRotation != Quaternion.identity)
             {
@@ -88,7 +83,6 @@ public class HandPosition : MonoBehaviour
         else
         {
             Contents.SetActive(false);
-            Specials.SetActive(false);
             pastRotation = Quaternion.identity;
         }
     }
@@ -102,15 +96,7 @@ public class HandPosition : MonoBehaviour
             if(obj.name[0] == 'F')
             {
                 obj.transform.localRotation = Quaternion.Euler(-buttonangle, 0, -90);
-                // 今の状態だとその場で回転しているだけなのでローカル座標もうまくいじる
-                if(cnt == 0 || cnt == 6)
-                {
-                    obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, calc_distance_y, calc_distance_z);
-                }
-                else
-                {
-                    obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, calc_distance_y + calc_margin_y*(cnt%6), calc_distance_z + calc_margin_z*(cnt%6));
-                }
+                obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, calc_distance_y + calc_margin_y*(cnt%8), calc_distance_z + calc_margin_z*(cnt%8));
             }
             cnt++;
         }
